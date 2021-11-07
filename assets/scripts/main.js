@@ -90,12 +90,17 @@ async function fetchRecipes() {
  * appends them to the page
  */
 function createRecipeCards() {
+  // turn this into a for loop to iterate over all the recipes:
+  for(let i = 0; i < recipes.length; i++){
   // Makes a new recipe card
   const recipeCard = document.createElement('recipe-card');
   // Inputs the data for the card. This is just the first recipe in the recipes array,
   // being used as the key for the recipeData object
   recipeCard.data = recipeData[recipes[0]];
-
+  //add the class 'hidden' to every recipe card with an index greater  than 2 in your for loop to make show more button functional
+  if(i > 2){
+    recipeCard.classList.add('hidden');
+  }
   // This gets the page name of each of the arrays - which is basically
   // just the filename minus the .json. Since this is the first element
   // in our recipes array, the ghostCookies URL, we will receive the .json
@@ -110,6 +115,7 @@ function createRecipeCards() {
   bindRecipeCard(recipeCard, page);
 
   document.querySelector('.recipe-cards--wrapper').appendChild(recipeCard);
+  }
 
   /**
    * TODO - Part 1 - Step 3
@@ -121,7 +127,7 @@ function createRecipeCards() {
    * After this step you should see multiple cards rendered like the end of the last
    * lab
    */
-  
+
 }
 
 /**
