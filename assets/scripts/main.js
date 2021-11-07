@@ -57,6 +57,9 @@ function initializeServiceWorker() {
    *  TODO - Part 2 Step 1
    *  Initialize the service worker set up in sw.js
    */
+  if('serviceWorker' in navigator){ //if there's a service worker in navigator
+    
+  }
 }
 
 /**
