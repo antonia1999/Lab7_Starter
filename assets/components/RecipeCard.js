@@ -41,12 +41,10 @@ class RecipeCard extends HTMLElement {
         row-gap: 5px;
         padding: 0 16px 16px 16px;
         width: 178px;
-
         background-color: white;
         transition: all 0.2s ease;
         user-select: none;
       }
-
       article:hover {
         border-radius: 8px;
         cursor: pointer;
@@ -54,7 +52,6 @@ class RecipeCard extends HTMLElement {
         transition: all 0.2s ease;
         transform: scale(1.02);
       }
-
       div.rating {
         align-items: center;
         column-gap: 5px;
@@ -133,7 +130,7 @@ class RecipeCard extends HTMLElement {
     if (ratingVal) {
       rating.innerHTML = `
         <span>${ratingVal}</span>
-        <img src="/assets/images/icons/${numStars}-star.svg" alt="${numStars} stars">
+        <img src="assets/images/icons/${numStars}-star.svg" alt="${numStars} stars">
       `;
       if (ratingTotal) {
         rating.innerHTML += `<span>(${ratingTotal})</span>`;

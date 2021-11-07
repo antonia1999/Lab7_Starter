@@ -20,7 +20,6 @@ class RecipeExpand extends HTMLElement {
         transition: all 0.2s ease;
         width: 80%;
       }
-
       div.rating--wrapper {
         align-items: center;
         column-gap: 5px;
@@ -35,7 +34,6 @@ class RecipeExpand extends HTMLElement {
         object-fit: scale-down;
         width: 78px;
       }
-
       header {
         align-items: flex-start;
         column-gap: 10px;
@@ -45,11 +43,9 @@ class RecipeExpand extends HTMLElement {
          'meta meta img'
          'desc desc img';
       }
-
       header p {
         margin: 0;
       }
-
       header > h1 {
         font-size: 2rem;
         font-weight: 500;
@@ -57,33 +53,28 @@ class RecipeExpand extends HTMLElement {
         margin: -10px 0 0 0;
         padding: 0;
       }
-
       h2 {
         font-size: 1.5rem;
         font-weight: 500;
         margin: 35px 0 0 0;
       }
-
       header > div.meta--wrapper {
         display: grid;
         grid-area: meta;
         margin: 10px 0;
         row-gap: 4px;
       }
-
       header > div.meta--wrapper p,
       main > div.rating--wrapper {
         color: gray;
         font-style: italic;
       }
-
       header > div.meta--wrapper 
       :is(.meta--yield, .meta--total-time, .meta--categories) {
         color: black;
         font-style: normal;
         font-weight: 600;
       }
-
       header img.thumbnail {
         aspect-ratio: 1;
         grid-area: img;
@@ -91,39 +82,31 @@ class RecipeExpand extends HTMLElement {
         overflow: hidden;
         width: 230px;
       }
-
       header p.description {
         height: 62px;
         line-height: 20px;
         overflow: hidden;
         text-overflow: ellipsis;
       }
-
       main > .section--ingredients,
       main > .section--instructions {
         font-size: 1.1rem;
       }
-
       span.rating-total {
         margin-left: -2px;
       }
-
       ol, ul {
         margin-top: 10px;
       }
-
       ol li:not(:first-child) {
         margin-top: 15px;
       }
-
       ol li::marker {
         padding-right: 5px;
       }
-
       ul li {
         padding-left: 2px;
       }
-
       ul li:not(:first-child) {
         margin-top: 8px;
       }
@@ -229,7 +212,7 @@ class RecipeExpand extends HTMLElement {
     const numStars = Math.round(ratingVal);
     if (ratingVal) {
       rating.innerHTML = `
-      <img src="/assets/images/icons/${numStars}-star.svg" alt="${numStars} stars">
+      <img src="assets/images/icons/${numStars}-star.svg" alt="${numStars} stars">
       <span>${ratingVal}</span>
       from
       `;
