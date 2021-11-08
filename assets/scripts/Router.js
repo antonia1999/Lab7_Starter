@@ -19,6 +19,7 @@ export class Router {
    * @param {Function} homeFunc The function to run to set the home route
    *                            visually
    */
+  
   constructor(homeFunc) {
     /**
      * TODO Part 1
@@ -85,7 +86,7 @@ export class Router {
     if(!statePopped && window.location.hash != hash){
       //history.pushState(state, title [, url])
       //history.pushState(myState, title, url), then myState == event.state
-      history.pushState(page ,"", window.location.origin + hash)
+      history.pushState(page , "", window.location + hash)
     }
     //Finally, call the stored function for the given page
     this[page]();
